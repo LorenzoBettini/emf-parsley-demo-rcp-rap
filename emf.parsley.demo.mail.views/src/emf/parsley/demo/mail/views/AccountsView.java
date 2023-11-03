@@ -5,6 +5,8 @@ import java.io.IOException;
 import org.eclipse.emf.common.command.Command;
 
 public class AccountsView extends org.eclipse.emf.parsley.views.SaveableTreeView {
+	public static final String ID = "emf.parsley.demo.mail.views.AccountsView";
+
 	/**
 	 * Instead of letting the view become dirty, we immediately save the
 	 * EMF resource.

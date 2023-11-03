@@ -4,6 +4,13 @@ Bundle-ManifestVersion: 2
 Bundle-Name: emf.parsley.demo.mail.views
 Bundle-Vendor: My Company
 Bundle-Version: 1.0.0.qualifier
+Export-Package: emf.parsley.demo.mail.views,
+ emf.parsley.demo.mail.views.accountsview,
+ emf.parsley.demo.mail.views.accountsview.config,
+ emf.parsley.demo.mail.views.accountsview.edit.ui.provider,
+ emf.parsley.demo.mail.views.accountsview.resource,
+ emf.parsley.demo.mail.views.accountsview.ui.provider,
+ emf.parsley.demo.mail.views.resource
 Bundle-SymbolicName: emf.parsley.demo.mail.views; singleton:=true
 Bundle-Activator: emf.parsley.demo.mail.views.ViewsActivator
 Bundle-ActivationPolicy: lazy
@@ -13,7 +20,7 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.parsley.views;resolution:=optional,
  org.eclipse.emf.parsley.rap.views;resolution:=optional,
  org.eclipse.xtext.xbase.lib,
- emf.parsley.demo.mail.model;bundle-version="1.13.0"
+ emf.parsley.demo.mail.model
 Import-Package: org.apache.log4j,
  org.apache.commons.logging
 Bundle-RequiredExecutionEnvironment: JavaSE-17

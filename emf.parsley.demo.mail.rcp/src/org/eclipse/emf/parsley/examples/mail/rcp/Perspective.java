@@ -16,6 +16,7 @@ import org.eclipse.ui.IPageLayout;
 import org.eclipse.ui.IPerspectiveFactory;
 
 import emf.parsley.demo.mail.views.AccountsView;
+import emf.parsley.demo.mail.views.MailsView;
 
 public class Perspective implements IPerspectiveFactory {
 
@@ -41,7 +42,11 @@ public class Perspective implements IPerspectiveFactory {
 		
 		IFolderLayout folder = layout.createFolder("Accounts", IPageLayout.LEFT, 0.25f, editorArea);
 		folder.addView(AccountsView.ID);
-		
+		layout.getViewLayout(AccountsView.ID).setCloseable(false);
+
+		layout.addStandaloneView(MailsView.ID, true, IPageLayout.TOP, 0.25f, editorArea);
+		layout.getViewLayout(MailsView.ID).setCloseable(false);
+
 		//layout.getViewLayout(NavigationView.ID).setCloseable(false);
 //		layout.getViewLayout(AccountsView.ID).setCloseable(false);
 //		layout.getViewLayout(UnifiedFoldersView.ID).setCloseable(false);

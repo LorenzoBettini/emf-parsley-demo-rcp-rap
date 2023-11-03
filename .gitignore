@@ -1,0 +1,11 @@
+.metadata
+*.class
+bin/
+*~
+logs.zip
+*.orig
+.svn/
+target/
+*.java._trace
+*.smap
+hs_*.log

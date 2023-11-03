@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: emf.parsley.demo.mail.views
+Bundle-ManifestVersion: 2
+Bundle-Name: emf.parsley.demo.mail.views
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: emf.parsley.demo.mail.views; singleton:=true
+Bundle-Activator: emf.parsley.demo.mail.views.ViewsActivator
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.ui;resolution:=optional,
+ org.eclipse.rap.ui;resolution:=optional,
+ org.eclipse.emf.parsley.views;resolution:=optional,
+ org.eclipse.emf.parsley.rap.views;resolution:=optional,
+ org.eclipse.xtext.xbase.lib
+Import-Package: org.apache.log4j,
+ org.apache.commons.logging
+Bundle-RequiredExecutionEnvironment: JavaSE-17

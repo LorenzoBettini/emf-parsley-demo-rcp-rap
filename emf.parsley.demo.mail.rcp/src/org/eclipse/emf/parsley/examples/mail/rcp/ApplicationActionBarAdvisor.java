@@ -10,13 +10,11 @@
  *******************************************************************************/
 package org.eclipse.emf.parsley.examples.mail.rcp;
 
-import org.eclipse.jface.action.Action;
 import org.eclipse.jface.action.GroupMarker;
 import org.eclipse.jface.action.ICoolBarManager;
 import org.eclipse.jface.action.IMenuManager;
 import org.eclipse.jface.action.IToolBarManager;
 import org.eclipse.jface.action.MenuManager;
-import org.eclipse.jface.action.Separator;
 import org.eclipse.jface.action.ToolBarContributionItem;
 import org.eclipse.jface.action.ToolBarManager;
 import org.eclipse.swt.SWT;
@@ -38,10 +36,6 @@ public class ApplicationActionBarAdvisor extends ActionBarAdvisor {
     // in the fill methods.  This ensures that the actions aren't recreated
     // when fillActionBars is called with FILL_PROXY.
     private IWorkbenchAction exitAction;
-    private IWorkbenchAction aboutAction;
-    private IWorkbenchAction newWindowAction;
-    private Action messagePopupAction;
-    
 
     public ApplicationActionBarAdvisor(IActionBarConfigurer configurer) {
         super(configurer);
@@ -57,15 +51,6 @@ public class ApplicationActionBarAdvisor extends ActionBarAdvisor {
 
         exitAction = ActionFactory.QUIT.create(window);
         register(exitAction);
-        
-        aboutAction = ActionFactory.ABOUT.create(window);
-        register(aboutAction);
-        
-        newWindowAction = ActionFactory.OPEN_NEW_WINDOW.create(window);
-        register(newWindowAction);
-        
-        messagePopupAction = new MessagePopupAction("Open Message", window);
-        register(messagePopupAction);
     }
     
     @Override
@@ -79,20 +64,12 @@ public class ApplicationActionBarAdvisor extends ActionBarAdvisor {
         menuBar.add(helpMenu);
         
         // File
-        fileMenu.add(newWindowAction);
-        fileMenu.add(new Separator());
-        fileMenu.add(messagePopupAction);
-        fileMenu.add(new Separator());
         fileMenu.add(exitAction);
-        
-        // Help
-        helpMenu.add(aboutAction);
     }
     
     @Override
 	protected void fillCoolBar(ICoolBarManager coolBar) {
         IToolBarManager toolbar = new ToolBarManager(SWT.FLAT | SWT.RIGHT);
         coolBar.add(new ToolBarContributionItem(toolbar, "main"));   
-        toolbar.add(messagePopupAction);
     }
 }

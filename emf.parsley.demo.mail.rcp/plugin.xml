@@ -20,38 +20,6 @@
       </perspective>
    </extension>
    <extension
-         point="org.eclipse.ui.commands">
-      <category
-            name="Mail"
-            id="org.eclipse.emf.parsley.examples.mail.rcp.category">
-      </category>
-      <command
-            name="Open Mailbox"
-            description="Opens a mailbox"
-            categoryId="org.eclipse.emf.parsley.examples.mail.rcp.category"
-            id="org.eclipse.emf.parsley.examples.mail.rcp.open">
-      </command>
-      <command
-            name="Open Message Dialog"
-            description="Open a message dialog"
-            categoryId="org.eclipse.emf.parsley.examples.mail.rcp.category"
-            id="org.eclipse.emf.parsley.examples.mail.rcp.openMessage">
-      </command>
-   </extension>
-   <extension
-         point="org.eclipse.ui.bindings">
-      <key
-            commandId="org.eclipse.emf.parsley.examples.mail.rcp.open"
-            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
-            sequence="CTRL+2">
-      </key>
-      <key
-            commandId="org.eclipse.emf.parsley.examples.mail.rcp.openMessage"
-            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
-            sequence="CTRL+3">
-      </key>
-   </extension>
-   <extension
          id="product"
          point="org.eclipse.core.runtime.products">
       <product

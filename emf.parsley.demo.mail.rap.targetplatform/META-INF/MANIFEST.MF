@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Targetplatform for EMF Parsley RAP Examples
+Bundle-SymbolicName: emf.parsley.demo.mail.rap.targetplatform
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: EMF Modeling Project

@@ -13,7 +13,10 @@ Export-Package: emf.parsley.demo.mail.views,
  emf.parsley.demo.mail.views.mailsview,
  emf.parsley.demo.mail.views.mailsview.config,
  emf.parsley.demo.mail.views.mailsview.ui.provider,
- emf.parsley.demo.mail.views.resource
+ emf.parsley.demo.mail.views.resource,
+ org.eclipse.emf.parsley.examples.mail.messageview,
+ org.eclipse.emf.parsley.examples.mail.messageview.binding,
+ org.eclipse.emf.parsley.examples.mail.messageview.ui.provider
 Bundle-SymbolicName: emf.parsley.demo.mail.views; singleton:=true
 Bundle-Activator: emf.parsley.demo.mail.views.ViewsActivator
 Bundle-ActivationPolicy: lazy

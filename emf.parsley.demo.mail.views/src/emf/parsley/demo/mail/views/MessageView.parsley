@@ -1,0 +1,50 @@
+import emf.parsley.demo.mail.model.mail.Mail
+import emf.parsley.demo.mail.views.MessageView
+import org.eclipse.swt.SWT
+import org.eclipse.swt.layout.GridData
+
+module org.eclipse.emf.parsley.examples.mail.messageview {
+	
+	parts {
+		viewpart emf.parsley.demo.mail.views.MessageView {
+			viewname "Mail Message View"
+			viewclass MessageView
+			viewcategory org.eclipse.emf.parsley.examples.mail.messageview
+		}
+	}
+	
+	labelProvider {
+		text {
+			Mail -> subject
+		}
+		image {
+			Mail -> "email.png"
+		}
+	}
+	formControlFactory {
+		control {
+			Mail : message ->
+				{
+					val t = createText("", 
+							SWT.MULTI, SWT.BORDER, 
+      						SWT.WRAP, SWT.V_SCROLL
+						)
+					t.editable = false
+					t.layoutData = new GridData(GridData.FILL_BOTH)
+					return t
+				}
+				target observeText(SWT::Modify)
+		}
+	}
+	featuresProvider {
+		features {
+			// the subject is already in the title
+			Mail -> from, recipients, message
+		}
+	}
+	featureCaptionProvider {
+		text {
+			Mail : recipients -> 'to'
+		}
+	}
+}

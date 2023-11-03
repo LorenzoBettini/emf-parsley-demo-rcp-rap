@@ -29,4 +29,4 @@ Require-Bundle: org.eclipse.core.runtime,
  emf.parsley.demo.mail.model
 Import-Package: org.apache.log4j,
  org.apache.commons.logging
-Bundle-RequiredExecutionEnvironment: JavaSE-17
+Bundle-RequiredExecutionEnvironment: JavaSE-11

@@ -1,4 +1,4 @@
-package org.eclipse.emf.parsley.examples.mail.messageview.ui.provider;
+package emf.parsley.demo.mail.views.messageview.ui.provider;
 
 import com.google.inject.Inject;
 import emf.parsley.demo.mail.model.mail.Mail;

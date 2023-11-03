@@ -1,11 +1,11 @@
-package org.eclipse.emf.parsley.examples.mail.messageview;
+package emf.parsley.demo.mail.views.messageview;
 
+import emf.parsley.demo.mail.views.messageview.binding.MessageviewFormControlFactory;
+import emf.parsley.demo.mail.views.messageview.ui.provider.MessageviewFeatureCaptionProvider;
+import emf.parsley.demo.mail.views.messageview.ui.provider.MessageviewFeaturesProvider;
+import emf.parsley.demo.mail.views.messageview.ui.provider.MessageviewLabelProvider;
 import org.eclipse.emf.parsley.EmfParsleyGuiceModule;
 import org.eclipse.emf.parsley.composite.FormControlFactory;
-import org.eclipse.emf.parsley.examples.mail.messageview.binding.MessageviewFormControlFactory;
-import org.eclipse.emf.parsley.examples.mail.messageview.ui.provider.MessageviewFeatureCaptionProvider;
-import org.eclipse.emf.parsley.examples.mail.messageview.ui.provider.MessageviewFeaturesProvider;
-import org.eclipse.emf.parsley.examples.mail.messageview.ui.provider.MessageviewLabelProvider;
 import org.eclipse.emf.parsley.ui.provider.FeatureCaptionProvider;
 import org.eclipse.emf.parsley.ui.provider.FeaturesProvider;
 import org.eclipse.jface.viewers.ILabelProvider;

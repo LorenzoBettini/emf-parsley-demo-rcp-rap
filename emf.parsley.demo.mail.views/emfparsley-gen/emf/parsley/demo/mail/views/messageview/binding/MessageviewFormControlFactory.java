@@ -1,4 +1,4 @@
-package org.eclipse.emf.parsley.examples.mail.messageview.binding;
+package emf.parsley.demo.mail.views.messageview.binding;
 
 import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.emf.ecore.EStructuralFeature;

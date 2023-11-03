@@ -3,7 +3,7 @@ import emf.parsley.demo.mail.views.MessageView
 import org.eclipse.swt.SWT
 import org.eclipse.swt.layout.GridData
 
-module org.eclipse.emf.parsley.examples.mail.messageview {
+module emf.parsley.demo.mail.views.messageview {
 	
 	parts {
 		viewpart emf.parsley.demo.mail.views.MessageView {

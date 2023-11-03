@@ -1,4 +1,4 @@
-package org.eclipse.emf.parsley.examples.mail.messageview.ui.provider;
+package emf.parsley.demo.mail.views.messageview.ui.provider;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.parsley.ui.provider.FeatureCaptionProvider;

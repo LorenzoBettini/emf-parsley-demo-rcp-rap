@@ -10,7 +10,6 @@
  *******************************************************************************/
 package emf.parsley.demo.mail.views;
 
-
 import org.eclipse.emf.parsley.views.OnSelectionReadOnlyFormView;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.ui.IWorkbenchPart;
@@ -18,7 +17,7 @@ import org.eclipse.ui.IWorkbenchPart;
 import emf.parsley.demo.mail.model.mail.MailPackage;
 
 public class MessageView extends OnSelectionReadOnlyFormView {
-	
+
 	public static final String ID = "emf.parsley.demo.mail.views.MessageView";
 
 	@Override

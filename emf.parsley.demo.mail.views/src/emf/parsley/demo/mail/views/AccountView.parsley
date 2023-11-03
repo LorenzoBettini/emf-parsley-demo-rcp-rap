@@ -1,0 +1,90 @@
+import emf.parsley.demo.mail.model.mail.Account
+import emf.parsley.demo.mail.model.mail.Folder
+import emf.parsley.demo.mail.views.AccountsView
+import emf.parsley.demo.mail.views.resource.MailResourceManager
+import org.eclipse.emf.common.util.URI
+import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain
+import org.eclipse.emf.parsley.edit.IEditingStrategy
+import org.eclipse.emf.parsley.edit.UndoableEditingStrategy
+import org.eclipse.emf.parsley.edit.domain.GlobalAdapterFactoryEditingDomainProvider
+
+module emf.parsley.demo.mail.views.accountsview {
+	
+	parts {
+		viewpart emf.parsley.demo.mail.views.AccountsView {
+			viewname "Mail Accounts View"
+			viewclass AccountsView
+			viewcategory org.eclipse.emf.parsley.examples.mail.accountsview
+		}
+	}
+
+	bindings {
+		type IEditingStrategy -> UndoableEditingStrategy
+		
+		// with this binding, a global EditingDomain will be used:
+		// other modules extending this module will share the EditingDomain
+		provide AdapterFactoryEditingDomain -> GlobalAdapterFactoryEditingDomainProvider
+	}
+
+	configurator {
+		val URI mailModelURI = URI.createFileURI(System.getProperty("user.home")
+			+ "/examples/mail/My.mail")
+		
+		resourceURI {
+			AccountsView -> mailModelURI
+		}
+	}
+	
+	resourceManager extends MailResourceManager {
+		initializeResource {
+			// we use utility methods defined in the superclass
+			createAccount("Alice", "alice@foobar") => [
+				account |
+				getContents += account
+				createDefaultFolders(account)
+			]
+			
+			createAccount("Bob", "bob@foobar") => [
+				account |
+				getContents += account
+				createDefaultFolders(account)
+			]
+			
+			createAccount("Carl", "carl@foobar") => [
+				account |
+				getContents += account
+				createDefaultFolders(account)
+			]
+		}
+	}
+	
+	labelProvider {
+		image {
+			Account -> "account.gif"
+			Folder -> {
+				// the label provider is used also by the menu builder
+				// which uses freshly created Folder (and the name will be null)
+				if (name === null)
+					return "folder.gif"
+				
+				switch (name) {
+					case "Inbox" : "inbox.gif"
+					case "Sent" : "sent.gif"
+					case "Trash" : "trash.gif"
+					default: "folder.gif"
+				}
+			}
+		}
+		
+		text {
+			Account -> email
+			Folder -> name
+		}
+	}
+	
+	viewerContentProvider {
+		children {
+			Folder -> subfolders // don't show emails
+		}
+	}
+}

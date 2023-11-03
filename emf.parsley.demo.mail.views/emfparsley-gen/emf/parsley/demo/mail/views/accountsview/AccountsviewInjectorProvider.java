@@ -1,18 +1,18 @@
-package emf.parsley.demo.mail.views;
+package emf.parsley.demo.mail.views.accountsview;
 
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import org.eclipse.emf.parsley.runtime.ui.PluginUtil;
 
 @SuppressWarnings("all")
-public class ViewsInjectorProvider {
+public class AccountsviewInjectorProvider {
   private static Injector injector;
 
   public static synchronized Injector getInjector() {
     if (injector == null) {
       injector = Guice.createInjector(
-        new ViewsEmfParsleyGuiceModule(PluginUtil.getPlugin(
-          PluginUtil.getBundle(ViewsInjectorProvider.class))));
+        new AccountsviewEmfParsleyGuiceModule(PluginUtil.getPlugin(
+          PluginUtil.getBundle(AccountsviewInjectorProvider.class))));
     }
     return injector;
   }

@@ -12,7 +12,8 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.rap.ui;resolution:=optional,
  org.eclipse.emf.parsley.views;resolution:=optional,
  org.eclipse.emf.parsley.rap.views;resolution:=optional,
- org.eclipse.xtext.xbase.lib
+ org.eclipse.xtext.xbase.lib,
+ emf.parsley.demo.mail.model;bundle-version="1.13.0"
 Import-Package: org.apache.log4j,
  org.apache.commons.logging
 Bundle-RequiredExecutionEnvironment: JavaSE-17

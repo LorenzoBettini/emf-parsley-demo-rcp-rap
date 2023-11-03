@@ -17,6 +17,7 @@ import org.eclipse.ui.IPerspectiveFactory;
 
 import emf.parsley.demo.mail.views.AccountsView;
 import emf.parsley.demo.mail.views.MailsView;
+import emf.parsley.demo.mail.views.MessageView;
 
 public class Perspective implements IPerspectiveFactory {
 
@@ -46,6 +47,9 @@ public class Perspective implements IPerspectiveFactory {
 
 		layout.addStandaloneView(MailsView.ID, true, IPageLayout.TOP, 0.25f, editorArea);
 		layout.getViewLayout(MailsView.ID).setCloseable(false);
+
+		layout.addStandaloneView(MessageView.ID, true, IPageLayout.BOTTOM, 0.25f, editorArea);
+		layout.getViewLayout(MessageView.ID).setCloseable(false);
 
 		//layout.getViewLayout(NavigationView.ID).setCloseable(false);
 //		layout.getViewLayout(AccountsView.ID).setCloseable(false);

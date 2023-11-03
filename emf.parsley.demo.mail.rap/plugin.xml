@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="org.eclipse.emf.parsley.examples.mail.rcp.MailApplication">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            name="EMF Parsley Mail RCP Perspective"
+            class="org.eclipse.emf.parsley.examples.mail.rcp.Perspective"
+            id="org.eclipse.emf.parsley.examples.mail.rcp.perspective">
+      </perspective>
+   </extension>
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="org.eclipse.emf.parsley.examples.mail.rcp.application"
+            name="EMF Parsley Mail RCP Product">
+         <property
+               name="aboutText"
+               value="RCP Mail template created by PDE">
+         </property>
+         <property
+               name="windowImages"
+               value="icons/sample2.gif">
+         </property>
+         <property
+               name="aboutImage"
+               value="product_lg.gif">
+         </property>
+         <property
+               name="appName"
+               value="EMF Parsley Mail RCP Product">
+         </property>
+      </product>
+   </extension>
+
+</plugin>

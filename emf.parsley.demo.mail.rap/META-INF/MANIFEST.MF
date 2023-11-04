@@ -3,11 +3,10 @@ Bundle-ManifestVersion: 2
 Bundle-Name: EMF Parsley Mail Example Rap
 Bundle-SymbolicName: emf.parsley.demo.mail.rap;singleton:=true
 Bundle-Version: 1.0.0.qualifier
-Bundle-Activator: org.eclipse.emf.parsley.examples.mail.rcp.Activator
 Bundle-Vendor: Eclipse Modeling Project
 Require-Bundle: org.eclipse.rap.ui,
  emf.parsley.demo.mail.model,
- emf.parsley.demo.mail.views
+ emf.parsley.demo.mail.views,
+ org.eclipse.emf.ecore.xmi;bundle-version="2.17.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-11
-Bundle-ActivationPolicy: lazy
 Automatic-Module-Name: emf.parsley.demo.mail.rap

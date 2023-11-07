@@ -4,7 +4,7 @@
    <extension
          point="org.eclipse.ui.views">
       <view
-            category="org.eclipse.emf.parsley.examples.mail.accountsview"
+            category="org.eclipse.emf.parsley"
             class="emf.parsley.demo.mail.views.accountsview.AccountsviewExecutableExtensionFactory:emf.parsley.demo.mail.views.AccountsView"
             id="emf.parsley.demo.mail.views.AccountsView"
             name="Mail Accounts View"

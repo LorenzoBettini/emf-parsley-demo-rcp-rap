@@ -4,21 +4,21 @@
    <extension
          point="org.eclipse.ui.views">
       <view
-            category="org.eclipse.emf.parsley.examples.mail.accountsview"
+            category="org.eclipse.emf.parsley"
             class="emf.parsley.demo.mail.views.accountsview.AccountsviewExecutableExtensionFactory:emf.parsley.demo.mail.views.AccountsView"
             id="emf.parsley.demo.mail.views.AccountsView"
             name="Mail Accounts View"
             restorable="true">
       </view>
       <view
-            category="org.eclipse.emf.parsley.examples.mail.mailsview"
+            category="org.eclipse.emf.parsley"
             class="emf.parsley.demo.mail.views.mailsview.MailsviewExecutableExtensionFactory:emf.parsley.demo.mail.views.MailsView"
             id="emf.parsley.demo.mail.views.MailsView"
             name="Mails View"
             restorable="true">
       </view>
       <view
-            category="org.eclipse.emf.parsley.examples.mail.messageview"
+            category="org.eclipse.emf.parsley"
             class="emf.parsley.demo.mail.views.messageview.MessageviewExecutableExtensionFactory:emf.parsley.demo.mail.views.MessageView"
             id="emf.parsley.demo.mail.views.MessageView"
             name="Mail Message View"

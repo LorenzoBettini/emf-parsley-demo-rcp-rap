@@ -14,7 +14,6 @@ module emf.parsley.demo.mail.views.accountsview {
 		viewpart emf.parsley.demo.mail.views.AccountsView {
 			viewname "Mail Accounts View"
 			viewclass AccountsView
-			viewcategory org.eclipse.emf.parsley.examples.mail.accountsview
 		}
 	}
 

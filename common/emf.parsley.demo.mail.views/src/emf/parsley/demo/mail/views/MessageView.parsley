@@ -9,7 +9,6 @@ module emf.parsley.demo.mail.views.messageview {
 		viewpart emf.parsley.demo.mail.views.MessageView {
 			viewname "Mail Message View"
 			viewclass MessageView
-			viewcategory org.eclipse.emf.parsley.examples.mail.messageview
 		}
 	}
 	

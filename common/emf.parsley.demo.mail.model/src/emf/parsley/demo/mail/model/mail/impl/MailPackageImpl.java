@@ -4,9 +4,7 @@ package emf.parsley.demo.mail.model.mail.impl;
 
 import emf.parsley.demo.mail.model.mail.Account;
 import emf.parsley.demo.mail.model.mail.Folder;
-import emf.parsley.demo.mail.model.mail.FolderContent;
 import emf.parsley.demo.mail.model.mail.Mail;
-import emf.parsley.demo.mail.model.mail.MailContent;
 import emf.parsley.demo.mail.model.mail.MailFactory;
 import emf.parsley.demo.mail.model.mail.MailPackage;
 
@@ -37,20 +35,6 @@ public class MailPackageImpl extends EPackageImpl implements MailPackage {
 	 * @generated
 	 */
 	private EClass folderEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass folderContentEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass mailContentEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -205,26 +189,6 @@ public class MailPackageImpl extends EPackageImpl implements MailPackage {
 	 * @generated
 	 */
 	@Override
-	public EClass getFolderContent() {
-		return folderContentEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EClass getMailContent() {
-		return mailContentEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EClass getMail() {
 		return mailEClass;
 	}
@@ -308,10 +272,6 @@ public class MailPackageImpl extends EPackageImpl implements MailPackage {
 		createEAttribute(folderEClass, FOLDER__NAME);
 		createEReference(folderEClass, FOLDER__MAILS);
 
-		folderContentEClass = createEClass(FOLDER_CONTENT);
-
-		mailContentEClass = createEClass(MAIL_CONTENT);
-
 		mailEClass = createEClass(MAIL);
 		createEAttribute(mailEClass, MAIL__FROM);
 		createEAttribute(mailEClass, MAIL__RECIPIENTS);
@@ -347,8 +307,6 @@ public class MailPackageImpl extends EPackageImpl implements MailPackage {
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		folderEClass.getESuperTypes().add(this.getFolderContent());
-		mailContentEClass.getESuperTypes().add(this.getFolderContent());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(accountEClass, Account.class, "Account", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -360,10 +318,6 @@ public class MailPackageImpl extends EPackageImpl implements MailPackage {
 		initEReference(getFolder_Subfolders(), this.getFolder(), null, "subfolders", null, 0, -1, Folder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getFolder_Name(), ecorePackage.getEString(), "name", null, 0, 1, Folder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFolder_Mails(), this.getMail(), null, "mails", null, 0, -1, Folder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(folderContentEClass, FolderContent.class, "FolderContent", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(mailContentEClass, MailContent.class, "MailContent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(mailEClass, Mail.class, "Mail", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getMail_From(), ecorePackage.getEString(), "from", null, 0, 1, Mail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

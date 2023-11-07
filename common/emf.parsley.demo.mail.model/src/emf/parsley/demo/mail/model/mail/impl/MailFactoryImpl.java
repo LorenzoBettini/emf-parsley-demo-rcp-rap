@@ -58,7 +58,6 @@ public class MailFactoryImpl extends EFactoryImpl implements MailFactory {
 		switch (eClass.getClassifierID()) {
 			case MailPackage.ACCOUNT: return createAccount();
 			case MailPackage.FOLDER: return createFolder();
-			case MailPackage.MAIL_CONTENT: return createMailContent();
 			case MailPackage.MAIL: return createMail();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -85,17 +84,6 @@ public class MailFactoryImpl extends EFactoryImpl implements MailFactory {
 	public Folder createFolder() {
 		FolderImpl folder = new FolderImpl();
 		return folder;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public MailContent createMailContent() {
-		MailContentImpl mailContent = new MailContentImpl();
-		return mailContent;
 	}
 
 	/**

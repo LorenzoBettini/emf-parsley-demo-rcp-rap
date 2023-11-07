@@ -4,6 +4,8 @@ package emf.parsley.demo.mail.model.mail;
 
 import org.eclipse.emf.common.util.EList;
 
+import org.eclipse.emf.ecore.EObject;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Folder</b></em>'.
@@ -22,7 +24,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Folder extends FolderContent {
+public interface Folder extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Subfolders</b></em>' containment reference list.
 	 * The list contents are of type {@link emf.parsley.demo.mail.model.mail.Folder}.

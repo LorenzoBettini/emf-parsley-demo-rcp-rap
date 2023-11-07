@@ -40,15 +40,6 @@ public interface MailFactory extends EFactory {
 	Folder createFolder();
 
 	/**
-	 * Returns a new object of class '<em>Content</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Content</em>'.
-	 * @generated
-	 */
-	MailContent createMailContent();
-
-	/**
 	 * Returns a new object of class '<em>Mail</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -112,34 +112,6 @@ public interface MailPackage extends EPackage {
 	int ACCOUNT_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link emf.parsley.demo.mail.model.mail.impl.FolderContentImpl <em>Folder Content</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see emf.parsley.demo.mail.model.mail.impl.FolderContentImpl
-	 * @see emf.parsley.demo.mail.model.mail.impl.MailPackageImpl#getFolderContent()
-	 * @generated
-	 */
-	int FOLDER_CONTENT = 2;
-
-	/**
-	 * The number of structural features of the '<em>Folder Content</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FOLDER_CONTENT_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>Folder Content</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FOLDER_CONTENT_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link emf.parsley.demo.mail.model.mail.impl.FolderImpl <em>Folder</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -156,7 +128,7 @@ public interface MailPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FOLDER__SUBFOLDERS = FOLDER_CONTENT_FEATURE_COUNT + 0;
+	int FOLDER__SUBFOLDERS = 0;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -165,7 +137,7 @@ public interface MailPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FOLDER__NAME = FOLDER_CONTENT_FEATURE_COUNT + 1;
+	int FOLDER__NAME = 1;
 
 	/**
 	 * The feature id for the '<em><b>Mails</b></em>' containment reference list.
@@ -174,7 +146,7 @@ public interface MailPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FOLDER__MAILS = FOLDER_CONTENT_FEATURE_COUNT + 2;
+	int FOLDER__MAILS = 2;
 
 	/**
 	 * The number of structural features of the '<em>Folder</em>' class.
@@ -183,7 +155,7 @@ public interface MailPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FOLDER_FEATURE_COUNT = FOLDER_CONTENT_FEATURE_COUNT + 3;
+	int FOLDER_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Folder</em>' class.
@@ -192,35 +164,7 @@ public interface MailPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FOLDER_OPERATION_COUNT = FOLDER_CONTENT_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link emf.parsley.demo.mail.model.mail.impl.MailContentImpl <em>Content</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see emf.parsley.demo.mail.model.mail.impl.MailContentImpl
-	 * @see emf.parsley.demo.mail.model.mail.impl.MailPackageImpl#getMailContent()
-	 * @generated
-	 */
-	int MAIL_CONTENT = 3;
-
-	/**
-	 * The number of structural features of the '<em>Content</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MAIL_CONTENT_FEATURE_COUNT = FOLDER_CONTENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Content</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MAIL_CONTENT_OPERATION_COUNT = FOLDER_CONTENT_OPERATION_COUNT + 0;
+	int FOLDER_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link emf.parsley.demo.mail.model.mail.impl.MailImpl <em>Mail</em>}' class.
@@ -230,7 +174,7 @@ public interface MailPackage extends EPackage {
 	 * @see emf.parsley.demo.mail.model.mail.impl.MailPackageImpl#getMail()
 	 * @generated
 	 */
-	int MAIL = 4;
+	int MAIL = 2;
 
 	/**
 	 * The feature id for the '<em><b>From</b></em>' attribute.
@@ -372,26 +316,6 @@ public interface MailPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getFolder_Mails();
-
-	/**
-	 * Returns the meta object for class '{@link emf.parsley.demo.mail.model.mail.FolderContent <em>Folder Content</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Folder Content</em>'.
-	 * @see emf.parsley.demo.mail.model.mail.FolderContent
-	 * @generated
-	 */
-	EClass getFolderContent();
-
-	/**
-	 * Returns the meta object for class '{@link emf.parsley.demo.mail.model.mail.MailContent <em>Content</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Content</em>'.
-	 * @see emf.parsley.demo.mail.model.mail.MailContent
-	 * @generated
-	 */
-	EClass getMailContent();
 
 	/**
 	 * Returns the meta object for class '{@link emf.parsley.demo.mail.model.mail.Mail <em>Mail</em>}'.
@@ -537,26 +461,6 @@ public interface MailPackage extends EPackage {
 		 * @generated
 		 */
 		EReference FOLDER__MAILS = eINSTANCE.getFolder_Mails();
-
-		/**
-		 * The meta object literal for the '{@link emf.parsley.demo.mail.model.mail.impl.FolderContentImpl <em>Folder Content</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see emf.parsley.demo.mail.model.mail.impl.FolderContentImpl
-		 * @see emf.parsley.demo.mail.model.mail.impl.MailPackageImpl#getFolderContent()
-		 * @generated
-		 */
-		EClass FOLDER_CONTENT = eINSTANCE.getFolderContent();
-
-		/**
-		 * The meta object literal for the '{@link emf.parsley.demo.mail.model.mail.impl.MailContentImpl <em>Content</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see emf.parsley.demo.mail.model.mail.impl.MailContentImpl
-		 * @see emf.parsley.demo.mail.model.mail.impl.MailPackageImpl#getMailContent()
-		 * @generated
-		 */
-		EClass MAIL_CONTENT = eINSTANCE.getMailContent();
 
 		/**
 		 * The meta object literal for the '{@link emf.parsley.demo.mail.model.mail.impl.MailImpl <em>Mail</em>}' class.

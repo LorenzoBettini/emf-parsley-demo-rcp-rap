@@ -17,8 +17,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mail.ecore#//Folder/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mail.ecore#//Folder/mails"/>
     </genClasses>
-    <genClasses image="false" ecoreClass="mail.ecore#//FolderContent"/>
-    <genClasses ecoreClass="mail.ecore#//MailContent"/>
     <genClasses ecoreClass="mail.ecore#//Mail">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mail.ecore#//Mail/from"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mail.ecore#//Mail/recipients"/>

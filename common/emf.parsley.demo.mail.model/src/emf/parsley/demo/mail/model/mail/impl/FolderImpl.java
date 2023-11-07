@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -36,7 +37,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class FolderImpl extends FolderContentImpl implements Folder {
+public class FolderImpl extends MinimalEObjectImpl.Container implements Folder {
 	/**
 	 * The cached value of the '{@link #getSubfolders() <em>Subfolders</em>}' containment reference list.
 	 * <!-- begin-user-doc -->

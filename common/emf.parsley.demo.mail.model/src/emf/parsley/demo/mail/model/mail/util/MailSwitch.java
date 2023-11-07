@@ -75,20 +75,6 @@ public class MailSwitch<T> extends Switch<T> {
 			case MailPackage.FOLDER: {
 				Folder folder = (Folder)theEObject;
 				T result = caseFolder(folder);
-				if (result == null) result = caseFolderContent(folder);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case MailPackage.FOLDER_CONTENT: {
-				FolderContent folderContent = (FolderContent)theEObject;
-				T result = caseFolderContent(folderContent);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case MailPackage.MAIL_CONTENT: {
-				MailContent mailContent = (MailContent)theEObject;
-				T result = caseMailContent(mailContent);
-				if (result == null) result = caseFolderContent(mailContent);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -129,36 +115,6 @@ public class MailSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseFolder(Folder object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Folder Content</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Folder Content</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseFolderContent(FolderContent object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Content</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Content</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseMailContent(MailContent object) {
 		return null;
 	}
 

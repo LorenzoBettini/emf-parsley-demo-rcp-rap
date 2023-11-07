@@ -76,14 +76,6 @@ public class MailAdapterFactory extends AdapterFactoryImpl {
 				return createFolderAdapter();
 			}
 			@Override
-			public Adapter caseFolderContent(FolderContent object) {
-				return createFolderContentAdapter();
-			}
-			@Override
-			public Adapter caseMailContent(MailContent object) {
-				return createMailContentAdapter();
-			}
-			@Override
 			public Adapter caseMail(Mail object) {
 				return createMailAdapter();
 			}
@@ -132,34 +124,6 @@ public class MailAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createFolderAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link emf.parsley.demo.mail.model.mail.FolderContent <em>Folder Content</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see emf.parsley.demo.mail.model.mail.FolderContent
-	 * @generated
-	 */
-	public Adapter createFolderContentAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link emf.parsley.demo.mail.model.mail.MailContent <em>Content</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see emf.parsley.demo.mail.model.mail.MailContent
-	 * @generated
-	 */
-	public Adapter createMailContentAdapter() {
 		return null;
 	}
 

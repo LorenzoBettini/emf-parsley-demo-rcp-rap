@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            name="EMF Parsley Mail RCP Perspective"
+            class="emf.parsley.demo.mail.app.common.Perspective"
+            id="emf.parsley.demo.mail.perspective">
+      </perspective>
+   </extension>
+
+</plugin>

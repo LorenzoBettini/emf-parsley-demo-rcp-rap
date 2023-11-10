@@ -16,6 +16,8 @@ import org.eclipse.swt.widgets.Display;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.application.WorkbenchAdvisor;
 
+import emf.parsley.demo.mail.app.common.ApplicationWorkbenchAdvisor;
+
 /**
  * This class controls all aspects of the application's execution
  */

@@ -12,14 +12,7 @@
     <booleanAttribute key="default" value="true"/>
     <booleanAttribute key="default_auto_start" value="true"/>
     <intAttribute key="default_start_level" value="4"/>
-    <setAttribute key="deselected_workspace_bundles">
-        <setEntry value="emf.parsley.demo.mail.rap.targetplatform"/>
-        <setEntry value="org.eclipse.emf.parsley.examples.cdo.model"/>
-        <setEntry value="org.eclipse.emf.parsley.examples.cdo.rap"/>
-        <setEntry value="org.eclipse.emf.parsley.examples.cdo.treeform"/>
-        <setEntry value="org.eclipse.emf.parsley.examples.rap.model"/>
-        <setEntry value="org.eclipse.emf.parsley.examples.rap.ui"/>
-    </setAttribute>
+    <setAttribute key="deselected_workspace_bundles"/>
     <booleanAttribute key="includeOptional" value="true"/>
     <booleanAttribute key="org.eclipse.debug.core.ATTR_FORCE_SYSTEM_CONSOLE_ENCODING" value="false"/>
     <booleanAttribute key="org.eclipse.jdt.launching.ATTR_ATTR_USE_ARGFILE" value="false"/>
@@ -34,7 +27,7 @@
     <stringAttribute key="org.eclipse.rap.launch.dataLocation" value="${workspace_loc}/.metadata/.plugins/org.eclipse.rap.tools.launch/EMFParsleyMailRAP"/>
     <booleanAttribute key="org.eclipse.rap.launch.developmentMode" value="true"/>
     <booleanAttribute key="org.eclipse.rap.launch.openBrowser" value="true"/>
-    <intAttribute key="org.eclipse.rap.launch.port" value="8080"/>
+    <intAttribute key="org.eclipse.rap.launch.port" value="18000"/>
     <stringAttribute key="org.eclipse.rap.launch.servletPath" value="/mail"/>
     <intAttribute key="org.eclipse.rap.launch.sessionTimeout" value="0"/>
     <booleanAttribute key="org.eclipse.rap.launch.useDefaultDataLocation" value="true"/>

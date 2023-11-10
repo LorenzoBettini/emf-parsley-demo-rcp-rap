@@ -23,7 +23,7 @@
          id="product"
          point="org.eclipse.core.runtime.products">
       <product
-            application="org.eclipse.emf.parsley.examples.mail.rcp.application"
+            application="emf.parsley.demo.mail.rcp.application"
             name="EMF Parsley Mail RCP Product">
          <property
                name="aboutText"

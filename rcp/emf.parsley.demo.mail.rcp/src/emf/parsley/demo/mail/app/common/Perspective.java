@@ -24,7 +24,7 @@ public class Perspective implements IPerspectiveFactory {
 	/**
 	 * The ID of the perspective as specified in the extension.
 	 */
-	public static final String ID = "org.eclipse.emf.parsley.examples.mail.rcp.perspective";
+	public static final String ID = "emf.parsley.demo.mail.perspective";
 
 	@Override
 	public void createInitialLayout(IPageLayout layout) {

@@ -19,7 +19,7 @@
             cardinality="singleton-global"
             thread="main">
          <run
-               class="org.eclipse.emf.parsley.examples.mail.rcp.MailApplication">
+               class="emf.parsley.demo.mail.app.rap.MailApplication">
          </run>
       </application>
    </extension>

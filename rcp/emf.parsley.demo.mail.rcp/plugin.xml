@@ -7,7 +7,7 @@
          point="org.eclipse.core.runtime.applications">
       <application>
          <run
-               class="org.eclipse.emf.parsley.examples.mail.rcp.MailApplication">
+               class="emf.parsley.demo.mail.app.rcp.MailApplication">
          </run>
       </application>
    </extension>

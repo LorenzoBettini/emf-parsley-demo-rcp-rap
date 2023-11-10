@@ -12,14 +12,6 @@
       </application>
    </extension>
    <extension
-         point="org.eclipse.ui.perspectives">
-      <perspective
-            name="EMF Parsley Mail RCP Perspective"
-            class="emf.parsley.demo.mail.app.common.Perspective"
-            id="emf.parsley.demo.mail.perspective">
-      </perspective>
-   </extension>
-   <extension
          id="product"
          point="org.eclipse.core.runtime.products">
       <product

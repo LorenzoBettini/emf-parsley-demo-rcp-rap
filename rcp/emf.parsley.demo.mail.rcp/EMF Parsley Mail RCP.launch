@@ -156,6 +156,7 @@
         <setEntry value="org.w3c.dom.svg@default:default"/>
     </setAttribute>
     <setAttribute key="selected_workspace_bundles">
+        <setEntry value="emf.parsley.demo.mail.app.common@default:default"/>
         <setEntry value="emf.parsley.demo.mail.model@default:default"/>
         <setEntry value="emf.parsley.demo.mail.rcp@default:default"/>
         <setEntry value="emf.parsley.demo.mail.views@default:default"/>

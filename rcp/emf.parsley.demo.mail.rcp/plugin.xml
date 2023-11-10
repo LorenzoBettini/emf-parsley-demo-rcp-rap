@@ -15,7 +15,7 @@
          point="org.eclipse.ui.perspectives">
       <perspective
             name="EMF Parsley Mail RCP Perspective"
-            class="org.eclipse.emf.parsley.examples.mail.rcp.Perspective"
+            class="emf.parsley.demo.mail.app.common.Perspective"
             id="org.eclipse.emf.parsley.examples.mail.rcp.perspective">
       </perspective>
    </extension>

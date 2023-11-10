@@ -10,7 +10,6 @@
  *******************************************************************************/
 package emf.parsley.demo.mail.app.common;
 
-import org.eclipse.emf.parsley.examples.mail.rcp.Perspective;
 import org.eclipse.ui.application.IWorkbenchWindowConfigurer;
 import org.eclipse.ui.application.WorkbenchAdvisor;
 import org.eclipse.ui.application.WorkbenchWindowAdvisor;

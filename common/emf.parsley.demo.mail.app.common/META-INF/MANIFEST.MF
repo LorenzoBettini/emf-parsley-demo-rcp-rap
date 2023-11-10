@@ -6,7 +6,6 @@ Bundle-Version: 1.0.0.qualifier
 Export-Package: emf.parsley.demo.mail.app.common
 Bundle-Vendor: Eclipse Modeling Project
 Require-Bundle: org.eclipse.ui,
- org.eclipse.core.runtime,
  emf.parsley.demo.mail.model,
  emf.parsley.demo.mail.views
 Bundle-RequiredExecutionEnvironment: JavaSE-11

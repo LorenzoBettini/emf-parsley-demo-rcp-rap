@@ -1,13 +1,3 @@
-/*******************************************************************************
- * Copyright (c) 2013 RCP Vision (http://www.rcp-vision.com) and others.
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the Eclipse Public License v1.0
- * which accompanies this distribution, and is available at
- * http://www.eclipse.org/legal/epl-v10.html
- * 
- * Contributors:
- * Lorenzo Bettini - initial API and implementation
- *******************************************************************************/
 package emf.parsley.demo.mail.app.common;
 
 import org.eclipse.jface.action.GroupMarker;
@@ -26,50 +16,49 @@ import org.eclipse.ui.application.ActionBarAdvisor;
 import org.eclipse.ui.application.IActionBarConfigurer;
 
 /**
- * An action bar advisor is responsible for creating, adding, and disposing of the
- * actions added to a workbench window. Each window will be populated with
+ * An action bar advisor is responsible for creating, adding, and disposing of
+ * the actions added to a workbench window. Each window will be populated with
  * new actions.
  */
 public class ApplicationActionBarAdvisor extends ActionBarAdvisor {
 
-    // Actions - important to allocate these only in makeActions, and then use them
-    // in the fill methods.  This ensures that the actions aren't recreated
-    // when fillActionBars is called with FILL_PROXY.
-    private IWorkbenchAction exitAction;
+	// Actions - important to allocate these only in makeActions, and then use them
+	// in the fill methods. This ensures that the actions aren't recreated
+	// when fillActionBars is called with FILL_PROXY.
+	private IWorkbenchAction exitAction;
 
-    public ApplicationActionBarAdvisor(IActionBarConfigurer configurer) {
-        super(configurer);
-    }
-    
-    @Override
+	public ApplicationActionBarAdvisor(IActionBarConfigurer configurer) {
+		super(configurer);
+	}
+
+	@Override
 	protected void makeActions(final IWorkbenchWindow window) {
-        // Creates the actions and registers them.
-        // Registering is needed to ensure that key bindings work.
-        // The corresponding commands keybindings are defined in the plugin.xml file.
-        // Registering also provides automatic disposal of the actions when
-        // the window is closed.
+		// Creates the actions and registers them.
+		// Registering is needed to ensure that key bindings work.
+		// The corresponding commands keybindings are defined in the plugin.xml file.
+		// Registering also provides automatic disposal of the actions when
+		// the window is closed.
+		exitAction = ActionFactory.QUIT.create(window);
+		register(exitAction);
+	}
 
-        exitAction = ActionFactory.QUIT.create(window);
-        register(exitAction);
-    }
-    
-    @Override
+	@Override
 	protected void fillMenuBar(IMenuManager menuBar) {
-        MenuManager fileMenu = new MenuManager("&File", IWorkbenchActionConstants.M_FILE);
-        MenuManager helpMenu = new MenuManager("&Help", IWorkbenchActionConstants.M_HELP);
-        
-        menuBar.add(fileMenu);
-        // Add a group marker indicating where action set menus will appear.
-        menuBar.add(new GroupMarker(IWorkbenchActionConstants.MB_ADDITIONS));
-        menuBar.add(helpMenu);
-        
-        // File
-        fileMenu.add(exitAction);
-    }
-    
-    @Override
+		MenuManager fileMenu = new MenuManager("&File", IWorkbenchActionConstants.M_FILE);
+		MenuManager helpMenu = new MenuManager("&Help", IWorkbenchActionConstants.M_HELP);
+
+		menuBar.add(fileMenu);
+		// Add a group marker indicating where action set menus will appear.
+		menuBar.add(new GroupMarker(IWorkbenchActionConstants.MB_ADDITIONS));
+		menuBar.add(helpMenu);
+
+		// File
+		fileMenu.add(exitAction);
+	}
+
+	@Override
 	protected void fillCoolBar(ICoolBarManager coolBar) {
-        IToolBarManager toolbar = new ToolBarManager(SWT.FLAT | SWT.RIGHT);
-        coolBar.add(new ToolBarContributionItem(toolbar, "main"));   
-    }
+		IToolBarManager toolbar = new ToolBarManager(SWT.FLAT | SWT.RIGHT);
+		coolBar.add(new ToolBarContributionItem(toolbar, "main"));
+	}
 }
